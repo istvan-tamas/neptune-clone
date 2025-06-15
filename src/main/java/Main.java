@@ -1,14 +1,10 @@
-import database.DB;
+import controller.StudentController;
 
-import java.sql.SQLException;
 
 public class Main {
     public static void main(String[] args) {
-            try (var connection =  DB.connect()){
-                System.out.println("Connected to the PostgreSQL database.");
-            } catch (SQLException e) {
-                System.err.println(e.getMessage());
-            }
-
+        StudentController studentController = new StudentController();
+        //studentController.createStudent(new model.Student(2, "Jane", "Doe", "NEP234", "Computer Science", "Graduate"));
+        System.out.println(studentController.getAllStudents().get(1).toString());
     }
 }

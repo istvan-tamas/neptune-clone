@@ -1,10 +1,14 @@
 package controller.interfaces;
 
+import model.Student;
+
+import java.util.ArrayList;
+
 public interface StudentControllerInterface {
 
-    public void createStudent();
+    public void createStudent(Student student);
 
-    public void getAllStudents();
+    public ArrayList<Student> getAllStudents();
 
     public void getStudentById();
 

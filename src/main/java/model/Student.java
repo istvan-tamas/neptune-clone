@@ -15,5 +15,4 @@ public class Student {
     private String major;
     private String education_type;
 
-
 }
