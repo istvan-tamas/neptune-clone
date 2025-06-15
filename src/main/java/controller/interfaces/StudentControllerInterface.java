@@ -12,7 +12,7 @@ public interface StudentControllerInterface {
 
     public Student getStudentById(int id);
 
-    public void updateStudent();
+    public int updateStudent(int id, String first_name, String last_name, String neptune_code, String major, String education_type);
 
     public void deleteStudentById(int id);
 

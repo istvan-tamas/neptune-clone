@@ -84,9 +84,25 @@ public class StudentController implements StudentControllerInterface {
         return null;
     }
 
-    public void updateStudent()
+    public int updateStudent(int id, String first_name, String last_name, String neptune, String major, String education_type)
     {
-
+        var sql  = "UPDATE student "
+                + "SET first_name = ?, last_name = ?, neptune = ?, major = ?, education_type= ? "
+                + "WHERE id = ?";
+        int affectedRows = 0;
+        try (var conn  = DB.connect();
+             var pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, first_name);
+            pstmt.setString(2, last_name);
+            pstmt.setString(3, neptune);
+            pstmt.setString(4, major);
+            pstmt.setString(5, education_type);
+            pstmt.setInt(6, id);
+            affectedRows = pstmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return affectedRows;
     }
 
     public void deleteStudentById(int id)
