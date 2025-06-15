@@ -1,4 +1,4 @@
-package DB;
+package database;
 
 import java.io.IOException;
 import java.io.InputStream;
@@ -9,7 +9,7 @@ public class DatabaseConfig {
     static {
         try (InputStream input = DatabaseConfig.class.getClassLoader().getResourceAsStream("db/db-conn.txt")) {
             if (input == null) {
-                System.out.println("Sorry, unable to find db.properties");
+                System.out.println("Unable to find db-conn.txt");
                 System.exit(1);
             }
 

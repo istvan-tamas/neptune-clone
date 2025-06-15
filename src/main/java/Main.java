@@ -1,4 +1,4 @@
-import DB.DB;
+import database.DB;
 
 import java.sql.SQLException;
 
