@@ -10,10 +10,10 @@ public interface StudentControllerInterface {
 
     public ArrayList<Student> getAllStudents();
 
-    public void getStudentById();
+    public Student getStudentById(int id);
 
     public void updateStudent();
 
-    public void deleteStudentById();
+    public void deleteStudentById(int id);
 
 }

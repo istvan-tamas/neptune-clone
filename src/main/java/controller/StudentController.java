@@ -61,9 +61,27 @@ public class StudentController implements StudentControllerInterface {
         return students;
     }
 
-    public void getStudentById()
+    public Student getStudentById(int id)
     {
-
+        Student student = null;
+        var sql = "SELECT id, first_name, last_name, neptune, major, education_type FROM student WHERE id = ?";
+        try (var conn =  DB.connect();
+             var stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, id);
+            var rs = stmt.executeQuery();
+            if (rs.next()) {
+                return new Student(
+                        rs.getInt("id"),
+                        rs.getString("first_name"),
+                        rs.getString("last_name"),
+                        rs.getString("neptune"),
+                        rs.getString("major"),
+                        rs.getString("education_type"));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public void updateStudent()
@@ -71,9 +89,18 @@ public class StudentController implements StudentControllerInterface {
 
     }
 
-    public void deleteStudentById()
+    public void deleteStudentById(int id)
     {
-
+        var sql  = "DELETE FROM student WHERE id=?";
+        try (var conn  = DB.connect();
+             var pstmt = conn.prepareStatement(sql)) {
+            pstmt.setInt(1, id);
+            pstmt.executeUpdate();
+            System.out.printf("Student with id %d deleted\n", id);
+        } catch (SQLException e) {
+            System.out.println("Student not deleted");
+            e.printStackTrace();
+        }
     }
 
 }
