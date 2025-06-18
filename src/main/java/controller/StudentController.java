@@ -61,13 +61,13 @@ public class StudentController implements StudentControllerInterface {
         return students;
     }
 
-    public Student getStudentById(int id)
+    public Student getStudentByNeptune(String neptune)
     {
         Student student = null;
-        var sql = "SELECT id, first_name, last_name, neptune, major, education_type FROM student WHERE id = ?";
+        var sql = "SELECT id, first_name, last_name, neptune, major, education_type FROM student WHERE neptune LIKE ?";
         try (var conn =  DB.connect();
              var stmt = conn.prepareStatement(sql)) {
-            stmt.setInt(1, id);
+            stmt.setString(1, neptune);
             var rs = stmt.executeQuery();
             if (rs.next()) {
                 return new Student(
