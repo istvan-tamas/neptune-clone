@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.StudentView">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UpdateStudentController">
    <children>
       <Label layoutX="240.0" layoutY="37.0" text="Update Student">
          <font>
@@ -20,12 +19,13 @@
       <Label layoutX="163.0" layoutY="217.0" text="Neptune Code" textAlignment="RIGHT" />
       <Label layoutX="208.0" layoutY="256.0" text="Major" textAlignment="RIGHT" />
       <Label layoutX="162.0" layoutY="300.0" text="Education type" textAlignment="RIGHT" />
-      <TextField layoutX="290.0" layoutY="89.0" />
-      <TextField layoutX="290.0" layoutY="132.0" />
-      <TextField layoutX="290.0" layoutY="172.0" />
-      <TextField layoutX="290.0" layoutY="212.0" />
-      <TextField layoutX="290.0" layoutY="251.0" />
-      <TextField layoutX="290.0" layoutY="295.0" />
-      <Button layoutX="261.0" layoutY="353.0" mnemonicParsing="false" text="Update" />
+      <TextField fx:id="id" layoutX="290.0" layoutY="89.0" />
+      <TextField fx:id="first_name" layoutX="290.0" layoutY="132.0" />
+      <TextField fx:id="last_name" layoutX="290.0" layoutY="172.0" />
+      <TextField fx:id="neptune_code" layoutX="290.0" layoutY="212.0" />
+      <TextField fx:id="major" layoutX="290.0" layoutY="251.0" />
+      <TextField fx:id="education_type" layoutX="290.0" layoutY="295.0" />
+      <Button layoutX="270.0" layoutY="353.0" mnemonicParsing="false" onAction="#backToMain" text="Back" />
+      <Button layoutX="344.0" layoutY="353.0" mnemonicParsing="false" onAction="#updateStudent" text="Update" />
    </children>
 </Pane>
