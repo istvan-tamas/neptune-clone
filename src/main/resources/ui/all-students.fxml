@@ -6,18 +6,18 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.StudentView">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ShowAllStudentController">
    <children>
       <Label layoutX="258.0" layoutY="31.0" text="List of students" />
       <Button fx:id="back" layoutX="278.0" layoutY="354.0" mnemonicParsing="false" onAction="#backToMain" text="Back" />
-      <TableView editable="true" layoutX="15.0" layoutY="66.0" prefHeight="271.0" prefWidth="566.0">
+      <TableView fx:id="tbData" editable="true" layoutX="15.0" layoutY="66.0" prefHeight="271.0" prefWidth="566.0">
         <columns>
-          <TableColumn prefWidth="50.0" text="id" />
-          <TableColumn prefWidth="107.0" text="First Name" />
-            <TableColumn prefWidth="81.0" text="Last Name" />
-            <TableColumn prefWidth="98.0" text="Neptune code" />
-            <TableColumn prefWidth="93.0" text="Major" />
-            <TableColumn prefWidth="117.0" text="Education type" />
+          <TableColumn fx:id="id" prefWidth="50.0" text="id" />
+          <TableColumn fx:id="first_name" prefWidth="107.0" text="First Name" />
+            <TableColumn fx:id="last_name" prefWidth="81.0" text="Last Name" />
+            <TableColumn fx:id="neptune_code" prefWidth="98.0" text="Neptune code" />
+            <TableColumn fx:id="major" prefWidth="93.0" text="Major" />
+            <TableColumn fx:id="education_type" prefWidth="117.0" text="Education type" />
         </columns>
       </TableView>
    </children>

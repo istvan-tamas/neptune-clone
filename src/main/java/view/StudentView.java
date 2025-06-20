@@ -8,7 +8,9 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+
 import java.io.IOException;
+
 
 
 public class StudentView {
@@ -19,7 +21,9 @@ public class StudentView {
         Parent root = FXMLLoader.load(getClass().getResource("/ui/all-students.fxml"));
         stage.setScene(new Scene(root));
         stage.show();
+
     }
+
 
     @FXML
     private void backToMain(ActionEvent event) throws IOException {
@@ -56,4 +60,5 @@ public class StudentView {
         stage.setScene(new Scene(root));
         stage.show();
     }
+
 }
