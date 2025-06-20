@@ -8,8 +8,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.StudentView">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.SearchByNeptune">
    <children>
       <Label layoutX="207.0" layoutY="29.0" text="Search by Neptune code">
          <font>
@@ -17,18 +16,18 @@
          </font>
       </Label>
       <Label layoutX="146.0" layoutY="89.0" text="Neptune" />
-      <TextField layoutX="222.0" layoutY="85.0" />
-      <TableView layoutX="46.0" layoutY="128.0" prefHeight="200.0" prefWidth="509.0">
+      <TextField fx:id="search" layoutX="222.0" layoutY="85.0" />
+      <TableView fx:id="tbData" layoutX="46.0" layoutY="128.0" prefHeight="200.0" prefWidth="509.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="id" />
-          <TableColumn prefWidth="87.0" text="First Name" />
-            <TableColumn prefWidth="88.0" text="Last Name" />
-            <TableColumn prefWidth="77.0" text="Neptune" />
-            <TableColumn text="Major" />
-            <TableColumn prefWidth="101.0" text="Education type" />
+          <TableColumn fx:id="id" prefWidth="75.0" text="id" />
+          <TableColumn fx:id="first_name" prefWidth="87.0" text="First Name" />
+            <TableColumn fx:id="last_name" prefWidth="88.0" text="Last Name" />
+            <TableColumn fx:id="neptune_code" prefWidth="77.0" text="Neptune" />
+            <TableColumn fx:id="major" text="Major" />
+            <TableColumn fx:id="education_type" prefWidth="101.0" text="Education type" />
         </columns>
       </TableView>
-      <Button layoutX="399.0" layoutY="86.0" mnemonicParsing="false" text="Search" />
+      <Button layoutX="399.0" layoutY="86.0" mnemonicParsing="false" onAction="#searchStudents" text="Search" />
       <Button layoutX="278.0" layoutY="341.0" mnemonicParsing="false" onAction="#backToMain" text="Back" />
    </children>
 </Pane>

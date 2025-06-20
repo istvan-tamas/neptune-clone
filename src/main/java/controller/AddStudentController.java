@@ -36,7 +36,6 @@ public class AddStudentController {
         studentController.createStudent(new Student(first_name.getText(),last_name.getText(),neptune_code.getText(),major.getText(),education_type.getText()));
     }
 
-
     @FXML
     private void backToMain(ActionEvent event) throws IOException {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

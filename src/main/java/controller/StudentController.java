@@ -51,8 +51,8 @@ public class StudentController implements StudentControllerInterface {
                         rs.getString("first_name"),
                         rs.getString("last_name"),
                         rs.getString("neptune"),
-                                rs.getString("major"),
-                                rs.getString("education_type"));
+                        rs.getString("major"),
+                        rs.getString("education_type"));
                 students.add(student);
             }
         } catch (SQLException e) {
@@ -61,27 +61,29 @@ public class StudentController implements StudentControllerInterface {
         return students;
     }
 
-    public Student getStudentByNeptune(String neptune)
+    public ArrayList<Student> getStudentByNeptune(String neptune)
     {
-        Student student = null;
+        var students = new ArrayList<Student>();
         var sql = "SELECT id, first_name, last_name, neptune, major, education_type FROM student WHERE neptune LIKE ?";
         try (var conn =  DB.connect();
              var stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, neptune);
             var rs = stmt.executeQuery();
-            if (rs.next()) {
-                return new Student(
+            while (rs.next()) {
+                var student = new Student(
                         rs.getInt("id"),
                         rs.getString("first_name"),
                         rs.getString("last_name"),
                         rs.getString("neptune"),
                         rs.getString("major"),
                         rs.getString("education_type"));
+                students.add(student);
             }
+            return students;
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return null;
+        return students;
     }
 
     public int updateStudent(int id, String first_name, String last_name, String neptune, String major, String education_type)

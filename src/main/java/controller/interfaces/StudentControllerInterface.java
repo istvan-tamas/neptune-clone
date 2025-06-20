@@ -10,7 +10,7 @@ public interface StudentControllerInterface {
 
     public ArrayList<Student> getAllStudents();
 
-    public Student getStudentByNeptune(String neptune);
+    public ArrayList<Student> getStudentByNeptune(String neptune);
 
     public int updateStudent(int id, String first_name, String last_name, String neptune_code, String major, String education_type);
 
