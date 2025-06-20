@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.StudentView">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddStudentController">
    <children>
       <Label layoutX="240.0" layoutY="39.0" text="Create a Student">
          <font>
@@ -39,12 +38,12 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <Button layoutX="304.0" layoutY="350.0" mnemonicParsing="false" text="Add Student" />
+      <Button layoutX="304.0" layoutY="350.0" mnemonicParsing="false" onAction="#addStudent" text="Add Student" />
       <Button layoutX="227.0" layoutY="350.0" mnemonicParsing="false" onAction="#backToMain" text="Back" />
-      <TextField layoutX="273.0" layoutY="86.0" />
-      <TextField layoutX="273.0" layoutY="137.0" />
-      <TextField layoutX="273.0" layoutY="191.0" />
-      <TextField layoutX="273.0" layoutY="241.0" />
-      <TextField layoutX="273.0" layoutY="289.0" />
+      <TextField fx:id="first_name" layoutX="273.0" layoutY="86.0" />
+      <TextField fx:id="last_name" layoutX="273.0" layoutY="137.0" />
+      <TextField fx:id="neptune_code" layoutX="273.0" layoutY="191.0" />
+      <TextField fx:id="major" layoutX="273.0" layoutY="241.0" />
+      <TextField fx:id="education_type" layoutX="273.0" layoutY="289.0" />
    </children>
 </Pane>
