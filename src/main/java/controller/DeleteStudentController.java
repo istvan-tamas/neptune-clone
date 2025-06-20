@@ -11,25 +11,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class UpdateStudentController {
+public class DeleteStudentController {
 
     @FXML
     private TextField id;
-
-    @FXML
-    private TextField first_name;
-
-    @FXML
-    private TextField last_name;
-
-    @FXML
-    private TextField neptune_code;
-
-    @FXML
-    private TextField major;
-
-    @FXML
-    private TextField education_type;
 
     @FXML
     private void backToMain(ActionEvent event) throws IOException {
@@ -40,11 +25,8 @@ public class UpdateStudentController {
     }
 
     @FXML
-    private void updateStudent(ActionEvent event) {
+    private void deleteStudent(ActionEvent event) {
         StudentController studentController = new StudentController();
-        studentController.updateStudent(Integer.parseInt(id.getText()),first_name.getText(),last_name.getText(),neptune_code.getText(),major.getText(),education_type.getText());
+        studentController.deleteStudentById(Integer.parseInt(id.getText()));
     }
-
-
-
 }

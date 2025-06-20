@@ -104,6 +104,7 @@ public class StudentController implements StudentControllerInterface {
         } catch (SQLException e) {
             e.printStackTrace();
         }
+        System.out.println("Affected rows: " + affectedRows);
         return affectedRows;
     }
 
