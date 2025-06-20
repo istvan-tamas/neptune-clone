@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.StudentView">
    <children>
       <Label layoutX="240.0" layoutY="39.0" text="Create a Student">
          <font>
@@ -40,7 +40,7 @@
          </font>
       </Label>
       <Button layoutX="304.0" layoutY="350.0" mnemonicParsing="false" text="Add Student" />
-      <Button layoutX="227.0" layoutY="350.0" mnemonicParsing="false" text="Back" />
+      <Button layoutX="227.0" layoutY="350.0" mnemonicParsing="false" onAction="#backToMain" text="Back" />
       <TextField layoutX="273.0" layoutY="86.0" />
       <TextField layoutX="273.0" layoutY="137.0" />
       <TextField layoutX="273.0" layoutY="191.0" />

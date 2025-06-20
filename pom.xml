@@ -27,5 +27,21 @@
         <artifactId>postgresql</artifactId>
         <version>42.7.7</version>
     </dependency>
+    <dependency>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx</artifactId>
+        <version>11</version>
+        <type>pom</type>
+    </dependency>
+    <dependency>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-controls</artifactId>
+        <version>25-ea+20</version>
+    </dependency>
+    <dependency>
+        <groupId>org.openjfx</groupId>
+        <artifactId>javafx-fxml</artifactId>
+        <version>25-ea+20</version>
+    </dependency>
 </dependencies>
 </project>

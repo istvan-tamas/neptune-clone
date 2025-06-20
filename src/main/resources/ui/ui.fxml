@@ -5,17 +5,17 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.StudentView">
    <children>
       <Label layoutX="227.0" layoutY="58.0" text="Student Organizer">
          <font>
             <Font size="19.0" />
          </font>
       </Label>
-      <Button layoutX="404.0" layoutY="153.0" mnemonicParsing="false" text="List all students" />
-      <Button layoutX="79.0" layoutY="153.0" mnemonicParsing="false" text="Add new student" />
-      <Button layoutX="146.0" layoutY="238.0" mnemonicParsing="false" text="Update student info" />
-      <Button layoutX="225.0" layoutY="153.0" mnemonicParsing="false" text="Search by neptune code" />
-      <Button layoutX="300.0" layoutY="238.0" mnemonicParsing="false" text="Delete student from system" />
+      <Button fx:id="allStudents" layoutX="404.0" layoutY="153.0" mnemonicParsing="false" onAction="#showAllStudents" text="List all students" />
+      <Button fx:id="addNew" layoutX="79.0" layoutY="153.0" mnemonicParsing="false" onAction="#addNewStudent" text="Add new student" />
+      <Button fx:id="update" layoutX="146.0" layoutY="238.0" mnemonicParsing="false" onAction="#updateStudent" text="Update student info" />
+      <Button fx:id="byNeptune" layoutX="225.0" layoutY="153.0" mnemonicParsing="false" onAction="#searchByNeptune" text="Search by neptune code" />
+      <Button fx:id="delete" layoutX="300.0" layoutY="238.0" mnemonicParsing="false" onAction="#deleteStudentById" text="Delete student from system" />
    </children>
 </Pane>
