@@ -67,7 +67,7 @@ public class StudentController implements StudentControllerInterface {
         var sql = "SELECT id, first_name, last_name, neptune, major, education_type FROM student WHERE neptune LIKE ?";
         try (var conn =  DB.connect();
              var stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, neptune);
+            stmt.setString(1, "%" + neptune + "%");
             var rs = stmt.executeQuery();
             while (rs.next()) {
                 var student = new Student(
